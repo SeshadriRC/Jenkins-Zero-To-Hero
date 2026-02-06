@@ -124,6 +124,11 @@ usermod -aG docker ubuntu
 systemctl restart docker
 ```
 
+- Jun run ```hello-world```, so from below we can see its working
+
+<img width="1179" height="544" alt="image" src="https://github.com/user-attachments/assets/2bee0cdb-496f-4a1c-aee5-59a5240b18f6" />
+
+
 Once you are done with the above steps, it is better to restart Jenkins.
 
 ```
