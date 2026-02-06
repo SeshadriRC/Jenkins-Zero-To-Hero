@@ -116,7 +116,7 @@ sudo apt install docker.io
  
 ### Grant Jenkins user and Ubuntu user permission to docker deamon.
 
-- Here just we are giving for ubuntu user in case if needed we can use
+- Here just we are giving for ubuntu user in case if needed we can use, whoever want to access the docker, they should be part of Docker group, so we are adding jenkins.
 ```
 sudo su - 
 usermod -aG docker jenkins
