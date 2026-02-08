@@ -1,5 +1,7 @@
 ## Installation as a Docker container
 
+## Method 1
+
 ```bash
 # Pull the image
 docker pull jenkins/jenkins:lts
@@ -16,3 +18,7 @@ jenkins@510555411f0f:/$ cat /var/jenkins_home/secrets/initialAdminPassword
 # Access using below url
 http://localhost:9080/
 ```
+
+## Method 2
+
+Follow the official [doc](https://www.jenkins.io/doc/book/installing/docker/#on-windows)
