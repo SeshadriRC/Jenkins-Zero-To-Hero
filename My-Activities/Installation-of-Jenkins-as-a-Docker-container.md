@@ -41,4 +41,6 @@ docker run --name jenkins-blueocean --restart=on-failure --detach `
   --volume jenkins-docker-certs:/certs/client:ro `
   --publish 9092:8080 --publish 50000:50000 myjenkins-blueocean:2.541.1-1
 
+# access in below port
+http://localhost:9092/
 ```
