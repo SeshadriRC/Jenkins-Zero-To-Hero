@@ -24,6 +24,8 @@ Install Jenkins, configure Docker as agent, set up cicd, deploy applications to 
 
 ### Install Jenkins.
 
+[Install](https://www.jenkins.io/doc/book/installing/linux/#debian-java)
+
 Pre-Requisites:
  - Java (JDK)
 
@@ -45,13 +47,13 @@ java -version
 Now, you can proceed with installing Jenkins
 
 ```
-curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
-  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
-echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
-  https://pkg.jenkins.io/debian binary/ | sudo tee \
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
-sudo apt-get update
-sudo apt-get install jenkins
+sudo apt update
+sudo apt install jenkins
 ```
 
 **Note: ** By default, Jenkins will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 8080 in the inbound traffic rules as show below.
@@ -126,7 +128,15 @@ usermod -aG docker ubuntu
 systemctl restart docker
 ```
 
+- Login to docker using [PAT](https://app.docker.com/settings)
+
+<img width="1918" height="962" alt="image" src="https://github.com/user-attachments/assets/bc3bb11d-59e2-4bde-8671-271e8e95f38c" />
+
+
 - Jun run ```hello-world```, so from below we can see its working
+
+
+
 
 <img width="1179" height="544" alt="image" src="https://github.com/user-attachments/assets/2bee0cdb-496f-4a1c-aee5-59a5240b18f6" />
 
