@@ -131,6 +131,8 @@ systemctl restart docker
 - Login to docker using [PAT](https://app.docker.com/settings)
 
 <img width="1918" height="962" alt="image" src="https://github.com/user-attachments/assets/bc3bb11d-59e2-4bde-8671-271e8e95f38c" />
+<img width="1145" height="365" alt="image" src="https://github.com/user-attachments/assets/c2ccfb4f-c4f9-4822-aca6-30dc036c575d" />
+
 
 
 - Jun run ```hello-world```, so from below we can see its working
