@@ -126,6 +126,7 @@ sudo su -
 usermod -aG docker jenkins
 usermod -aG docker ubuntu
 systemctl restart docker
+systemctl restart jenkins
 ```
 
 - Login to docker using [PAT](https://app.docker.com/settings)
