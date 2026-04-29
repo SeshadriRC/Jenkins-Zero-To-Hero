@@ -80,17 +80,31 @@ Hurray !! Now you can access the `SonarQube Server` on `http://<ip-address>:9000
 ### Install the Docker on EC2
 - Follow the root repo
 
-### Start the minikube cluster
+### Start the minikube cluster on your lap
 
 ```
 minikube start --memory=4098 --driver=hyperkit
 ```
 
-### Install the ArgoCD controller
+### Install the ArgoCD controller in minikube
 
 - We are going to install this controller using ArgoCD Operator
 - Kubernetes operators will manage the lifecycle of kubernetes controller
 - Search for ArgoCD and install it [operatorhub.io](https://operatorhub.io/)
 
   <img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/f1f5297e-4fc0-4668-9850-66edb065d2ba" />
+
+- Edit the service to `NodePort` from `ClusterIP` ( `kubectl edit service example-argocd-server`)
+- List the service (`minikube service list`), through browser we can access the URL
+- `username`: admin, `password`: take from `kubectl edit secret example-argocd-cluster `
+- `echo -n cflyqn= | base64 -d`  -> Decode the password
+
+### Configure creds for Git and docker in Jenkins
+- Use manage Jenkins -> credentials option. we need a token from git and docker.
+
+ <img width="1906" height="663" alt="image" src="https://github.com/user-attachments/assets/fc562d3b-f834-47b0-8c24-e1499a77f66b" />
+
+### Try to build manually 
+
+- Click build now in Jenkins, it should get success
 
