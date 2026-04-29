@@ -9,7 +9,7 @@ Prerequisites:
 
    -  AWS EC2 `t2.large`
    -  Java application code hosted on a Git repository
-   -  Jenkins server
+   -  Jenkins server -> To install this, follow the root of the repository
    -  Kubernetes cluster
    -  Helm package manager
    -  Argo CD
