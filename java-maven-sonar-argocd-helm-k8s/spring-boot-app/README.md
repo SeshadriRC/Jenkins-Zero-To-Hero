@@ -70,4 +70,23 @@ cd /opt/sonarqube/bin/linux-x86-64
 Hurray !! Now you can access the `SonarQube Server` on `http://<ip-address>:9000` 
 
 - Credentials of Sonarqube is `username: admin` and `password: admin`
+- Generate the token in Sonarqube, so that `Jenkins` can able to authenticate with `Sonarqube`
+     - Sonarqube --> Myaccount --> Security --> Generate Token(give any name) and generate it
+     - Jenkins --> Manage Jenkins --> Manage Creds --> global creds -->
 
+       <img width="1914" height="1014" alt="image" src="https://github.com/user-attachments/assets/ca3fe15b-b51c-4410-838b-e85411593a7b" />
+
+
+### Install the Docker on EC2
+- Follow the root repo
+
+### Start the minikube cluster
+
+```
+minikube start --memory=4098 --driver=hyperkit
+```
+
+### Install the ArgoCD controller
+
+- We are going to install this controller using ArgoCD Operator
+- Kubernetes operators will manage the lifecycle of kubernetes controller
