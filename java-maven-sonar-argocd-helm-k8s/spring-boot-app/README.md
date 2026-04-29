@@ -90,3 +90,7 @@ minikube start --memory=4098 --driver=hyperkit
 
 - We are going to install this controller using ArgoCD Operator
 - Kubernetes operators will manage the lifecycle of kubernetes controller
+- Search for ArgoCD and install it [operatorhub.io](https://operatorhub.io/)
+
+  <img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/f1f5297e-4fc0-4668-9850-66edb065d2ba" />
+
