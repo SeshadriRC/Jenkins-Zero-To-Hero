@@ -14,7 +14,7 @@ git clone https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero/java-maven-sona
 cd java-maven-sonar-argocd-helm-k8s/sprint-boot-app
 ```
 
-Execute the Maven targets to generate the artifacts
+Execute the Maven targets to generate the artifacts  -> Don't perform this step, please follow the docker way, its easy
 
 ```
 mvn clean package
